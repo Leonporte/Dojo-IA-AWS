@@ -3,6 +3,9 @@ package main
 import (
 	"fmt"
 	"net/http"
+	// "os"
+	// "github.com/aws/aws-sdk-go/aws/session"
+	// "github.com/aws/aws-sdk-go/service/textract"
 )
 
 func main() {
@@ -12,5 +15,10 @@ func main() {
 }
 
 func imageHandler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "Teste imagem!")
+	removeBackgroundHandler(w, r)
+}
+
+func removeBackgroundHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Teste imagem!")
 }
